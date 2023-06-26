@@ -1,4 +1,4 @@
-@extends ('layout.app')
+@extends ('layouts.app')
 
 
 @section ('title', 'Examlaravel - Admin dashboard')
@@ -8,6 +8,7 @@
         Dashboard
     </div>
 @endsection
+
 
 
 
