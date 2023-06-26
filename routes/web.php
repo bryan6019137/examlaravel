@@ -33,7 +33,11 @@ Route::controller(AuthController::class)->group(function () {
     });
 
     Route::controller(TaskController::class)->prefix('task')->group(function (){
-//        Route::get('', 'index')->name('tasks');
+        Route::get('', 'index')->name('tasks');
+        Route::get('show/{id}', 'show')->name('products.show');
+        Route::get('edit/{id}', 'edit')->name('products.edit');
+        Route::put('edit/{id}', 'update')->name('products.update');
+        Route::delete('destroy/{id}', 'destroy')->name('products.destroy');
         Route::post('create', 'create')->name('task.create');
     });
 
