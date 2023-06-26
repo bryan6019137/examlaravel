@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AuthController;
+use App\Http\Controllers\TaskController;
 
 /*
 |--------------------------------------------------------------------------
@@ -31,5 +32,10 @@ Route::controller(AuthController::class)->group(function () {
         })->name('dashboard');
     });
 
+    Route::controller(TaskController::class)->prefix('task')->group(function (){
+        Route::get('', 'index')->name('tasks');
+    });
+
     Route::get('logout', 'logout')->middleware('auth')->name('logout');
+
 });
