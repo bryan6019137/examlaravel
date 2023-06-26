@@ -42,9 +42,7 @@
             <!-- End of Topbar -->
 
             <!-- Begin Page Content -->
-            <div class="container-fluid">
-                <p>Dashboard</p>
-            </div>
+            @include ('layouts.content')
         </div>
     </div>
 </div>

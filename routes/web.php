@@ -33,7 +33,8 @@ Route::controller(AuthController::class)->group(function () {
     });
 
     Route::controller(TaskController::class)->prefix('task')->group(function (){
-        Route::get('', 'index')->name('tasks');
+//        Route::get('', 'index')->name('tasks');
+        Route::post('create', 'create')->name('task.create');
     });
 
     Route::get('logout', 'logout')->middleware('auth')->name('logout');

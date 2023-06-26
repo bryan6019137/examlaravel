@@ -6,9 +6,4 @@
             <span>Dashboard</span></a>
     </li>
     <hr class="sidebar-divider">
-    <li class="nav-item active">
-        <a class="nav-link" href="{{ route('tasks') }}">
-{{--            <i class="fas fa-fw fa-tachometer-alt"></i>--}}
-            <span>Tasks</span></a>
-    </li>
 </ul>
