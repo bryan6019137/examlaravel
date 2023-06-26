@@ -32,12 +32,14 @@ Route::controller(AuthController::class)->group(function () {
         })->name('dashboard');
     });
 
+    Route::get('dashboard', [TaskController::class, 'index']);
+
     Route::controller(TaskController::class)->prefix('task')->group(function (){
-        Route::get('', 'index')->name('task');
+//        Route::get('dashboard', [TaskController::class, 'index']);
         Route::get('show/{id}', 'show')->name('task.show');
         Route::get('edit/{id}', 'edit')->name('task.edit');
         Route::put('edit/{id}', 'update')->name('task.update');
-        Route::delete('destroy/{id}', 'destroy')->name('products.destroy');
+        Route::delete('destroy/{id}', 'destroy')->name('task.destroy');
         Route::post('create', 'create')->name('task.create');
     });
 
